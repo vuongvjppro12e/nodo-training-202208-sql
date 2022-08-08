@@ -1,0 +1,37 @@
+
+--bài tập phần 7
+--1. Tạo bảng PROJECT với các column được chỉ ra dưới đây, PROJID là promary key, và P_END_DATE > P_START_DATE.
+create table PROJECT_VUONGCT (
+    PROJID number (4,0),
+    P_DESC varchar2(20),
+    P_START_DATE DATE,
+    P_END_DATE DATE,
+    BUDGET_AMOUNT NUMBER(7,2),
+    MAX_NO_STAFF NUMBER(2),
+    CHECK ( P_END_DATE > P_START_DATE ),
+    CONSTRAINT "PROJECT_CT_PK" PRIMARY KEY (PROJID)
+);
+--2. Tạo bảng ASSIGNMENTS với các column được chỉ ra dưới đây, đồng thời cột PROJID là foreign key tới bảng PROJECT, cột EMPNO là foreign key tới bảng EMP.
+create table ASSIGNMENT_VUONGCT(
+    "PROJID" NUMBER (4,0) NOT NULL ENABLE ,
+    "EMPNO" NUMBER(4,0) NOT NULL ENABLE ,
+    "A_START_DATE" DATE,
+    "BILL_AMOUNT" NUMBER(4,2),
+    "ASSIGN_TYPE" VARCHAR2(2 CHAR),
+    CONSTRAINT "ASSIGNMENT_VUONGCT_TBLEMP_FK1" FOREIGN KEY ("EMPNO")
+    REFERENCES "EMP" ("EMPNO") ON DELETE CASCADE ENABLE,
+    CONSTRAINT "ASSIGNMENT_PROJECT_FK1" FOREIGN KEY ("PROJID")
+    REFERENCES "PROJECT_VUONGCT" ("PROJID") ON
+    DELETE CASCADE ENABLE
+);
+--3. Thêm column COMMENTS kiểu LONG vào bảng PROJECTS. Thêm column HOURS kiểu NUMBER vào bảng ASSIGNMENTS.
+ALTER TABLE ASSIGNMENT_VUONGCT ADD (HOURS NUMBER);
+--4. Sử dụng view USER_OBJECTS hiển thị tất cả các đối tượng user sở hữu
+DESCRIBE USER_OBJECTS;
+--5. Thêm ràng buộc duy nhất (UNIQUE) cho 2 column PROJECT_ID và EMPNO của bảng ASSIGNMENTS.
+ALTER TABLE ASSIGNMENT_VUONGCT MODIFY (EMPNO UNIQUE );
+ALTER TABLE ASSIGNMENT_VUONGCT MODIFY (PROJID UNIQUE );
+--6. Xem các thông tin về các ràng buộc trong USER_CONSTRAINTS.
+SELECT * FROM USER_CONSTRAINTS;
+--7. Xem trong USER hiện tại có tất cả bao nhiêu bảng.
+SELECT TABLE_NAME FROM USER_TABLES;
