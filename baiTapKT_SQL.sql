@@ -82,7 +82,6 @@ create sequence VTV_sach_seq start with 1 increment by 1;
 create sequence VTV_ban_doc_seq start with 1 increment by 1;
 create sequence VTV_muon_sach_seq start with 1 increment by 1;
 -- cau 3.	Viết script tạo unique index cho các bảng nếu có.
-
 -- cau 4.	Viết script insert dữ liệu mẫu cho tất cả các bảng.
 insert into VIET_TIEN_VUONG_NXB (nxb_id, nxb_ma, nxb_ten, nxb_trang_thai, nxb_dia_chi, nxb_mo_ta) VALUES (VTV_NXB_SEQ.nextval,'1','kim dong','1','ha noi','nxb xin xo');
 insert into VIET_TIEN_VUONG_NXB (nxb_id, nxb_ma, nxb_ten, nxb_trang_thai, nxb_dia_chi, nxb_mo_ta) VALUES (VTV_NXB_SEQ.nextval,'2','kim dong2','1','ha noi2','nxb xin xo2');
@@ -117,9 +116,15 @@ select s_id,s_ten,nxb_ten,tg_ten,s_chu_de,s_nam_xuat_ban,s_so_luong_con_lai,s_so
 where ROWNUM 10;
 
 -- cau 7.Hiển thị  thông tin bạn đọc và sách được mượn từ ngày đầu tháng hiện tại đến thời điểm hiện tại.
+SELECT MA_BANDOC,TEN_BANDOC,MA_SACH,TEN_SACH,NGAYMUON_MUONSACH,SOLUONGCONLAI
+FROM DOAN_TU_BANDOC BD JOIN DOAN_TU_MUONSACH MS ON BD.ID = MS.ID_BANDOC JOIN DOAN_TU_SACH S ON MS.ID_SACH = S.ID
+ORDER BY MS.NGAYMUON_MUONSACH DESC, BD.TEN_BANDOC ;
+
 -- cau 8.	Hiển thị 10 quyển sách có số lượng được mượn nhiều nhất tính từ đầu năm 2022
 -- cau 9.	Hiển thị danh sách bạn đọc và số lần mượn sách tính từ đầu năm 2022 sắp xếp theo tên bạn đọc tăng dần Mã Bạn Đọc, Tên Bạn Đọc, Số Lần Mượn
 --cau 10.	Hiển thị thông tin bạn đọc gồm có Mã Bạn Đọc, Tên Bạn Đọc, Tuổi (được tính dựa vào trường ngày sinh)
 select bd_id,bd_ten,EXTRACT(YEAR FROM sysdate) - EXTRACT(YEAR FROM bd_ngay_sinh) as tuoi from VIET_TIEN_VUONG_ban_doc
 -- cau 11.	Thống kê tổng số bạn đọc theo độ Tuổi, Tổng số Bạn Đọc
+SELECT (TO_CHAR(SYSDATE,'YYYY') - TO_CHAR(bd_ngay_sinh,'YYYY')) AS TUỔI ,COUNT(bd_id) AS TỔNGSỐBẠNĐỌC
+FROM VIET_TIEN_VUONG_ban_doc GROUP BY (TO_CHAR(SYSDATE,'YYYY'))- TO_CHAR(bd_ngay_sinh,'YYYY');
 --cau 12.	Thống kê số lượng sách được xuất bản theo Nhà Xuất Bản, Theo năm xuất bản.
