@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class TreMapEx {
+public class TreeMapEx {
     public static void main(String[] args) {
         TreeMap<Integer,String> map = new TreeMap<>();
         map.put(3,"Nguyen van A");

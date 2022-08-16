@@ -22,24 +22,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.TreMapEx">
-    <configuration name="MapEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MapEx" />
+}</component>
+  <component name="RunManager" selected="Application.ConcurrencyTest">
+    <configuration name="CollectionOpEx2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectionOpEx2" />
       <module name="Unit3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreMapEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TreMapEx" />
+    <configuration name="CollectionOpEx3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectionOpEx3" />
+      <module name="Unit3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CollectionOpEx5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectionOpEx5" />
+      <module name="Unit3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CollectionOperation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectionOperation" />
+      <module name="Unit3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConcurrencyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ConcurrencyTest" />
       <module name="Unit3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -47,8 +68,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TreMapEx" />
-        <item itemvalue="Application.MapEx" />
+        <item itemvalue="Application.ConcurrencyTest" />
+        <item itemvalue="Application.CollectionOpEx5" />
+        <item itemvalue="Application.CollectionOpEx3" />
+        <item itemvalue="Application.CollectionOpEx2" />
+        <item itemvalue="Application.CollectionOperation" />
       </list>
     </recent_temporary>
   </component>
@@ -61,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660621655150</updated>
       <workItem from="1660621656529" duration="4032000" />
+      <workItem from="1660632755744" duration="3273000" />
     </task>
     <servers />
   </component>
