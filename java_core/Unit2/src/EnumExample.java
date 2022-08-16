@@ -1,6 +1,5 @@
 import java.util.Calendar;
 import java.util.Locale;
-
 public class EnumExample {
     public enum VnDay{
         THU_HAI,THU_BA,CHU_NHAT,THU_BAY,KHONG_BIET;
@@ -15,7 +14,6 @@ public class EnumExample {
         }
     }
     public static void main(String[] args) {
-
         Calendar calendar=Calendar.getInstance();
         System.out.println("home nay la "+VnDay.valuesOf(calendar));
     }
