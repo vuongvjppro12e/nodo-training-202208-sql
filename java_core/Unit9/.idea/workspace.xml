@@ -23,16 +23,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/JAVA6/LAB8_ASM-master",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JAVA6/LAB8_ASM-master&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.AWTListenerEx">
+}</component>
+  <component name="RunManager" selected="Application.StudentTest">
     <configuration name="AWTListenerEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AWTListenerEx" />
       <module name="Unit9" />
@@ -47,8 +47,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StudentTest" />
+      <module name="Unit9" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StudentTest" />
         <item itemvalue="Application.AWTListenerEx" />
         <item itemvalue="Application.RunnableTest" />
       </list>
@@ -64,6 +72,9 @@
       <updated>1660637128441</updated>
       <workItem from="1660637129981" duration="605000" />
       <workItem from="1660640695048" duration="5073000" />
+      <workItem from="1660700591456" duration="3128000" />
+      <workItem from="1660718311465" duration="89000" />
+      <workItem from="1660718429499" duration="87000" />
     </task>
     <servers />
   </component>

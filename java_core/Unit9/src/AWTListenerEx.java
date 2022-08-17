@@ -16,6 +16,6 @@ public class AWTListenerEx {
             }
         });
         screen.setSize(250,400);
-        screen.isVisible();
+        screen.setVisible(true);
     }
 }
