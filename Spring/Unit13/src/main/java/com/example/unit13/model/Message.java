@@ -1,12 +1,19 @@
 package com.example.unit13.model;
-
 public class Message {
-    String content;
+    private String content;
 
-    public Message(String s) {
+    public Message() {
     }
 
-    public String getContent(){
+    public String getContent() {
         return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Message(String content) {
+        this.content = content;
     }
 }
